@@ -10,6 +10,7 @@ public class hw2 {
     public static void main(String[] args) {
         System.out.println(upper());
     }
+
     public static boolean upper() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите кол-во значений в последовательности");
