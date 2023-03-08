@@ -1,4 +1,4 @@
-package hw1;
+package Seminar1;
 import java.util.Scanner;
 public class hw2 {
     public static void main(String[] args) {
