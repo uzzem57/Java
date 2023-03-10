@@ -12,7 +12,7 @@ import java.util.List;
 
 public class hw1 {
     public static void main(String[] args) {
-        Items item = new Items("высший", 154, "3 сорт");
+        Items item = new Items("высший", 154, "1 сорт");
         Items item1 = new Items("низший", 122, "1 сорт");
         Items item2 = new Items("высший", 187, "1 сорт");
         Items item3 = new Items("средний", 104, "2 сорт");
@@ -25,8 +25,8 @@ public class hw1 {
 
         int countPrice = 0;
         for (int i = 0; i < itemsList.size(); i++) {
-            if (itemsList.get(i).getName().equals("высший") && itemsList.get(i).getSort().equals("1 сорт")
-                    || itemsList.get(i).getSort().equals("2 сорт")) {
+            if (itemsList.get(i).getName().contains("высший") && itemsList.get(i).getSort().contains("1 сорт")
+                    || itemsList.get(i).getSort().contains("2 сорт")) {
                 if (itemsList.get(i).getPrice() > countPrice) {
                     countPrice = itemsList.get(i).getPrice();
                 }
