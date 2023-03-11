@@ -28,6 +28,7 @@ public class hw2 {
         Scanner scanner = new Scanner(System.in);
         String seachSort = scanner.nextLine();
         int countPrice = itemsList.get(0).getPrice();
+        scanner.close();
         /**
          * Проход для определения минимальной цены
          */
