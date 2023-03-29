@@ -2,44 +2,34 @@ package OOP.cw3;
 
 public abstract class Product {
     private String name;
-    private Double price;
-    private int volume;
+    private double cost;
 
-    public Integer getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-      public Product(String name, Double price) {
+    public Product(String name, double cost) {
         this.name = name;
-        this.price = price;
+        this.cost = cost;
     }
 
     public String getName() {
-
         return name;
     }
 
     public void setName(String name) {
-
         this.name = name;
     }
 
-    public Double getPrice() {
-
-        return price;
+    public double getCost() {
+        return cost;
     }
 
-    public void setPrice(Double price) {
-
-        this.price = price;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     @Override
     public String toString() {
-        return " name = " + name + " price = " + price + " volume = " + volume;
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", cost=" + cost +
+                '}';
     }
 }

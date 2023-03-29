@@ -1,18 +1,17 @@
 package OOP.cw3;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        VendingMachine machine = new VendingMachine();
-        machine.addProduct(new ProductWater("Fanta",100.00));
-        machine.addProduct(new ProductWater("Coca-cola",120.00));
-        machine.addProduct(new ProductChocolad("Snickers",50.00));
-        machine.addProduct(new ProductChocolad("Mars",60.00,2));
-        machine.addProduct(new ProductChocolad("Bounty",20.00,10,5));
+    public static void main(String[] args)  {
+        List<Product> list = new ArrayList<>();
+        list.add(new BottleOfWater("fanta",10,1));
+        list.add(new BottleOfWater("pepsi",18,2));
+        list.add(new BottleOfWater("coca-cola",12,1));
+    BottleOfWaterVendingMachine machine = new BottleOfWaterVendingMachine(list);
 
-        System.out.println(machine.getProductByName("Bounty",5));
+        System.out.println(machine.getProduct("peps",2));
 
     }
-
-
 }
