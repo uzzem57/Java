@@ -1,34 +1,29 @@
 package test;
 
-public class Cat extends Animals implements Doing{
-    private String name;
+public class Cat extends Animals {
+    private int age;
 
-    public Cat(String name) {
-        this.name = name;
+    public Cat() {
+        super();
+    }
+    public Cat(int age){
+        this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public int getAge() {
+        return age;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-
-
+    public void sayCat(){
+        System.out.println("Mia");
+    }
     @Override
-    public void run() {
-        System.out.println("Cat running");
+    public String toString() {
+        return String.valueOf(age);
     }
 
-    @Override
-    public void jump() {
-        System.out.println("Cat jumping");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Cat sleeping");;
-    }
 }

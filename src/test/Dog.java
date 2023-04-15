@@ -1,29 +1,16 @@
 package test;
 
-public class Dog extends Animals implements Doing{
+public class Dog extends Animals {
+    private int age;
 
-    private String name;
-    public Dog(String name) {
-        this.name = name;
+    public Dog() {
+        super();
     }
-
-    public String getName() {
-        return name;
+    public Dog(int age){
+        this.age = age;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
-    public void run() {
-        System.out.println("Dog running");
+    public String toString() {
+        return String.valueOf(age);
     }
-
-    @Override
-    public void jump() {
-        System.out.println("Dog jumping");
-
-    }
-
 }
