@@ -16,4 +16,6 @@ public class ToyCars extends ShopGames{
     public void setModel(String model) {
         this.model = model;
     }
+
+
 }
