@@ -3,6 +3,8 @@ package AttestationJava;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Alteration extends ToyCars implements Interfaces{
 
@@ -56,6 +58,18 @@ public class Alteration extends ToyCars implements Interfaces{
 
             // decrement the quantity of the prize toy
             prizeToy.setVolume(prizeToy.getVolume() - 1);
+        }
+    }
+
+    public void getPrizeToyCars() throws IOException {
+        if (prizeToys.size() > 0) {
+
+            ToyCars prizeToy = prizeToys.remove(0);
+
+
+            FileWriter writer = new FileWriter("prize_toysCars.txt", true);
+            writer.write(prizeToy.getId() + "," + prizeToy.getName() + "\n");
+            writer.close();
         }
     }
 

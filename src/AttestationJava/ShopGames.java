@@ -4,7 +4,7 @@ public abstract class ShopGames{
     private int id;
     private String name;
     private int volume;
-    private double toyDropRate; // (вес в % от 100)
+    private double toyDropRate;
 
     public ShopGames(int id, String name, int volume, double toyDropRate) {
         this.id = id;

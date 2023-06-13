@@ -1,23 +1,24 @@
 package AttestationJava;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
-        Alteration alt = new Alteration();
+        Alteration alt = new Alteration(1,"Toyota",30,25.0,"Corolla");
 
-        // add some toys
-        alt.addGames(1,"Volvo",50,15.0,"S90");
-        alt.addGames(2,"BMW",40,12.0,"X5");
-        alt.addGames(3,"LandRover",20,10.0,"Freelander2");
+        alt.addGames(2,"Volvo",50,15.0,"S90");
+        alt.addGames(3,"BMW",40,12.0,"X5");
+        alt.addGames(4,"LandRover",20,10.0,"Freelander2");
 
-        // set the weight of a toy
-        alt.setToyDropRate(2, 30);
 
-        // play the game
+        alt.setToyDropRate(2, 12.0);
+
         alt.play();
 
-        // get the prize toy
         try {
-            alt.getPrizeToy();
+            alt.getPrizeToyCars();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
