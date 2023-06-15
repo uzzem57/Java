@@ -11,7 +11,7 @@ public class Main {
         alt.addGames(4,"LandRover",20,10.0,"Freelander2");
 
 
-        alt.setToyDropRate(2, 12.0);
+        alt.setToyDropRate(2, 18.0);
 
         alt.play();
 
@@ -20,5 +20,6 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

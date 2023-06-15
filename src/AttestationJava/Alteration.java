@@ -56,7 +56,7 @@ public class Alteration extends ToyCars implements Interfaces{
         if (prizeToy != null && prizeToy.getVolume() > 0) {
             prizeToys.add(prizeToy);
 
-            // decrement the quantity of the prize toy
+
             prizeToy.setVolume(prizeToy.getVolume() - 1);
         }
     }
