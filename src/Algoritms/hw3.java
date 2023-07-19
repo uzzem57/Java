@@ -7,22 +7,22 @@ import java.util.Iterator;
 public class hw3 {
 
         public static void main(String[] args) {
-            SingleLinkList<NameList> contactList = new SingleLinkList<>();
+            SingleLinkList<NameList> myNameList = new SingleLinkList<>();
 
-            contactList.addToEnd(new NameList( "Александр" ));
-            contactList.addToEnd(new NameList( "Виталий"));
-            contactList.addToEnd(new NameList( "Дмитрий"));
-            contactList.addToEnd(new NameList( "Егор"));
-            contactList.addToEnd(new NameList( "Леонид"));
+            myNameList.add(new NameList( "Александр" ));
+            myNameList.add(new NameList( "Виталий"));
+            myNameList.add(new NameList( "Дмитрий"));
+            myNameList.add(new NameList( "Егор"));
+            myNameList.add(new NameList( "Леонид"));
 
-            for (Object contact : contactList) {
+            for (Object contact : myNameList) {
                 System.out.println(contact);
             }
-            contactList.reverse();
+            myNameList.reverse();
 
             System.out.println("-------------------------------------");
 
-            for (Object contact : contactList) {
+            for (Object contact : myNameList) {
                 System.out.println(contact);
             }
         }
@@ -38,8 +38,8 @@ public class hw3 {
 
             @Override
             public String toString() {
-                return "Contact{" +
-                        "name='" + name + '\'' +  '}';
+                return "NameList{" +
+                        "name = '" + name + '\'' +  '}';
             }
         }
 
@@ -77,7 +77,7 @@ public class hw3 {
                 return head == null;
             }
 
-            public void addToEnd(T item) {
+            public void add(T item) {
 
 
                 ListItem<T> newItem = new ListItem<>();
