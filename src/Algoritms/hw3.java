@@ -1,7 +1,5 @@
 package Algoritms;
 
-import org.w3c.dom.Node;
-
 import java.util.Iterator;
 
 public class hw3 {
