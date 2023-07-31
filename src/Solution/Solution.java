@@ -1,38 +1,36 @@
 package Solution;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Solution {
     public static void main(String[] args) {
-        Building school = getSchool();
-        Building shop = getBuilding();
-
-        System.out.println(school);
-        System.out.println(shop);
+        new B(6);
     }
 
-    public static Building getSchool() {
-        //измените null на объект класса Building или School
-        return null;
-    }
+    public static class A {
+        private int f1 = 7;
 
-    public static Building getBuilding() {
-        //измените null на объект класса Building или School
-        return null;
-    }
+        public A(int f1) {
+            this.f1 = f1;
+            initialize();
+        }
 
-    static class School extends Building {
-        @Override
-        public String toString() {
-            return "School";
+        protected void initialize() {
+            System.out.println(f1);
         }
     }
 
-    static class Building /*Добавьте сюда ваш код*/ {
-        @Override
-        public String toString() {
-            return "Building";
+    public static class B extends A {
+        protected int f1 = 3;
+
+        public B(int f1) {
+            super(f1);
+            this.f1 += f1;
+            initialize();
+        }
+
+        protected void initialize() {
+            System.out.println(f1);
         }
     }
 }
