@@ -3,6 +3,7 @@ package SeminarExceptions.HomeWork3.Task3;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class Add {
     /**
@@ -10,11 +11,11 @@ public class Add {
      *
      * @param a Первое число для сложения.
      * @param b Второе число для сложения.
-     * mylist Добавление в историю операций в текстовом виде с простановкой даты и времени операции.
+     * listAdd - история операций сложения с подстановкой даты и времени совершения.
      * @return Результат сложения a и b.
      */
-    public int add(int a, int b) {
-        List<String> myList = new ArrayList<>();
+    public static int add(int a, int b) {
+        List<String > listAdd = new ArrayList<>();
         StringBuilder builder = new StringBuilder();
         builder.append(a);
         builder.append('+');
@@ -25,7 +26,7 @@ public class Add {
         Date date = new Date();
         builder.append(date);
         String result = builder.toString();
-        myList.add(result);
+        listAdd.add(result);
 
         return a + b;
     }
